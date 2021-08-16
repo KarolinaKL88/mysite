@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    TEMPLATE VIEW
+    {% for poll in polls %}
+<li> <a href="{% url 'poll-detail-view' pk=poll.pk %}"> {{ poll }} </a> </li>
+    {% endfor %} <br>
+
+    LIST VIEW
+    {% for poll in object_list %}
+        <li>{{ poll }}</li>
+    {% endfor %}
+    <p><a href="{% url 'index' %}">RETURN TO INDEX PAGE</a></p>
+    <p><a href="{% url 'questions' %}">GO TO QUESTIONS</a></p>
+    <p><a href="{% url 'answers' %}">GO TO ANSWERS</a></p>
+{% endblock %}

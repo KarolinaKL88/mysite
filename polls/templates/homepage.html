@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    <p>HELLO HELLO WELCOME - please choose application </p>
+    <p><a href="{% url 'index' %}">GO TO POLLS</a></p>
+    <p><a href="{% url 'index2' %}">GO TO MOVIES</a></p>
+    <p><a href="{% url 'register' %}">REGISTRATION</a></p>
+    <p><a href="{% url 'login' %}">LOGIN</a></p>
+{% endblock %}

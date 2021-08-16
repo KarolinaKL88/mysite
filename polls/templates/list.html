@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for obj in object_list %}
+        <li>{{ obj }}</li>
+    {% endfor %}
+    <p><a href="{% url 'index' %}">RETURN TO INDEX PAGE</a></p>
+    <p><a href="{% url 'questions' %}">GO TO QUESTIONS</a></p>
+    <p><a href="{% url 'answers' %}">GO TO ANSWERS</a></p>
+{% endblock %}

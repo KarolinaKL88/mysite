@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
+        <p><a href="{% url 'poll-delete-view' pk=poll.pk %}"> Delete poll: {{ poll }} </a></p>
+        <p><a href="{% url 'poll-update-view' pk=poll.pk %}"> Update poll: {{ poll }} </a></p>
+{% endblock %}

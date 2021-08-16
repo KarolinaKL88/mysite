@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% for answer in answers %}
+        <!-- {{ forloop.counter }} COŚ jeszcze muszę przemyśleć i dopracować, bo dziwnie działa-->
+<li> <a href="{% url 'answer-detail-view' pk=answer.pk %}"> {{ answer }} </a> </li>
+    {% endfor %}
+
+{% include "index_redirect.html" %}
+    <p><a href="{% url 'index' %}">RETURN TO INDEX PAGE</a></p>
+    <p><a href="{% url 'polls' %}">GO TO POLLS</a></p>
+    <p><a href="{% url 'questions' %}">GO TO QUESTIONS</a></p>
+{% endblock %}

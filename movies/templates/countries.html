@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% for country in countries %}
+<li><a href="{% url 'country-detail-view' pk=country.pk %}"> {{ country }}</a></li>
+    {% endfor %} <br>
+
+{% endblock %}

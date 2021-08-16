@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% for oscar in oscars %}
+<li><a href="{% url 'oscar-detail-view' pk=oscar.pk %}">{{ oscar }}</a></li>
+    {% endfor %} <br>
+
+{% endblock %}

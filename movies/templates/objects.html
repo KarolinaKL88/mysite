@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
+        <p><a href="{% url delete_url pk=object.pk %}"> Delete: {{ object }} </a></p>
+        <p><a href="{% url update_url pk=object.pk %}"> Update: {{ object }} </a></p>
+{% endblock %}
